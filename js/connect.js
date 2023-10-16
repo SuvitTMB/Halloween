@@ -1,13 +1,1 @@
-function Connect_DB() {
-  var firebaseConfig = {
-    apiKey: "AIzaSyDfTJJ425U4OY0xac6jdhtSxDeuJ-OF-lE",
-    authDomain: "retailproject-6f4fc.firebaseapp.com",
-    projectId: "retailproject-6f4fc",
-    databaseURL: "https://file-upload-6f4fc.firebaseio.com",
-    storageBucket: "retailproject-6f4fc.appspot.com",
-    messagingSenderId: "653667385625",
-    appId: "1:653667385625:web:a5aed08500de80839f0588",
-    measurementId: "G-9SKTRHHSW9"
-  };
-  firebase.initializeApp(firebaseConfig);
-}
+function _0x3973(_0x2a620a,_0x576231){var _0x449b84=_0x449b();return _0x3973=function(_0x397396,_0x3deba4){_0x397396=_0x397396-0xb2;var _0x326568=_0x449b84[_0x397396];return _0x326568;},_0x3973(_0x2a620a,_0x576231);}(function(_0x51e782,_0x5e70a9){var _0x40c6ef=_0x3973,_0x6b2d4b=_0x51e782();while(!![]){try{var _0x1f4cf9=-parseInt(_0x40c6ef(0xbb))/0x1*(-parseInt(_0x40c6ef(0xc1))/0x2)+parseInt(_0x40c6ef(0xbc))/0x3*(-parseInt(_0x40c6ef(0xb9))/0x4)+parseInt(_0x40c6ef(0xba))/0x5+parseInt(_0x40c6ef(0xb5))/0x6*(parseInt(_0x40c6ef(0xbf))/0x7)+parseInt(_0x40c6ef(0xb4))/0x8*(parseInt(_0x40c6ef(0xc2))/0x9)+parseInt(_0x40c6ef(0xbe))/0xa*(-parseInt(_0x40c6ef(0xbd))/0xb)+-parseInt(_0x40c6ef(0xb8))/0xc;if(_0x1f4cf9===_0x5e70a9)break;else _0x6b2d4b['push'](_0x6b2d4b['shift']());}catch(_0x565007){_0x6b2d4b['push'](_0x6b2d4b['shift']());}}}(_0x449b,0xef738));function _0x449b(){var _0x558981=['retailproject-6f4fc.firebaseapp.com','100208discDA','2925066VTBcDg','retailproject-6f4fc','653667385625','33681984sdyQOa','4412jgNMkB','7057885YyAxmz','199149axWeKQ','216MhIgeL','3930432xhAlwV','40xTnuix','14CIUFvr','1:653667385625:web:a5aed08500de80839f0588','14xKtHDt','1089UAUewh','initializeApp'];_0x449b=function(){return _0x558981;};return _0x449b();}function Connect_DB(){var _0x1fb60e=_0x3973,_0x4ff58b={'apiKey':'AIzaSyDfTJJ425U4OY0xac6jdhtSxDeuJ-OF-lE','authDomain':_0x1fb60e(0xb3),'projectId':_0x1fb60e(0xb6),'databaseURL':'https://file-upload-6f4fc.firebaseio.com','storageBucket':'retailproject-6f4fc.appspot.com','messagingSenderId':_0x1fb60e(0xb7),'appId':_0x1fb60e(0xc0),'measurementId':'G-9SKTRHHSW9'};firebase[_0x1fb60e(0xb2)](_0x4ff58b);}
