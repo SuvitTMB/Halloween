@@ -3,7 +3,27 @@ var CheckFound = 0;
 //var dateString = "";
 
 
+
+
 $(document).ready(function () {
+
+  document.getElementById('id01').style.display='block';
+  var myaudio = document.querySelector('#myaudio');
+  var _overlay = document.querySelector('#overlay');
+   
+   _overlay.addEventListener('click', function(e) {
+     myaudio.play();
+     _overlay.remove();
+   },false);  
+ 
+   setTimeout(function(){
+       _overlay.style.display = 'block';
+   },1000);
+    
+  document.addEventListener('touchmove', function(e) {
+    e.preventDefault();
+  //  _overlay.style.display = 'block';
+  }, false);
 
 /*
   sessionStorage.clear(); 
@@ -24,7 +44,7 @@ $(document).ready(function () {
 
 
 async function main() {
-  await liff.init({ liffId: "1657509542-ezGx42JA" });
+  await liff.init({ liffId: "1657509542-mDY67W8w" });
   document.getElementById("isLoggedIn").append(liff.isLoggedIn());
   if(liff.isLoggedIn()) {
     getUserProfile();
@@ -168,3 +188,4 @@ function ClickBox() {
 function CloseAll() {
   document.getElementById('id01').style.display='none';
 }
+

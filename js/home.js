@@ -15,15 +15,15 @@ var XCheckRewards = 0;
 
 
 var arrMoonCake = Array(
-  [1, 'Halloween-1'],
-  [2, 'Halloween-2'],
-  [3, 'Halloween-3'],
-  [4, 'Halloween-4'],
-  [5, 'Halloween-5'],
-  [6, 'Halloween-6'],
-  [7, 'Halloween-7'],
-  [8, 'Halloween-8'],
-  [9, 'Halloween-9']
+  [1, 'Halloween#1'],
+  [2, 'Halloween#2'],
+  [3, 'Halloween#3'],
+  [4, 'Halloween#4'],
+  [5, 'Halloween#5'],
+  [6, 'Halloween#6'],
+  [7, 'Halloween#7'],
+  [8, 'Halloween#8'],
+  [9, 'Halloween#9']
 );
 
 
@@ -63,7 +63,10 @@ function CheckData() {
       document.getElementById('loading').style.display='none';
       document.getElementById('DisplayActive').style.display='block';
       document.getElementById('DisplayMyReward').style.display='none';
-      document.getElementById('id02').style.display='block';
+      if(sessionStorage.getItem("DisplayText")==null) { 
+        sessionStorage.setItem("DisplayText", 'Show');
+        document.getElementById('id02').style.display='block';
+      }
     }
   });
   MoonCake();
@@ -74,8 +77,8 @@ function MoonCake() {
   var str = "";
   var MaxProduct = 9;
   for (let i = 0; i < MaxProduct; i++) {
-    str += '<div class="box_gift"><div style="padding:5px"><img src="./img/g-'+ arrMoonCake[i][0] +'.png" style="width:80px;"></div>';
-    str += '<div class="text-name" onclick="OpenCake(\''+ arrMoonCake[i][0] +'\',\''+ arrMoonCake[i][1] +'\')">'+ arrMoonCake[i][1] +'</div></div>';
+    str += '<div onclick="OpenCake(\''+ arrMoonCake[i][0] +'\',\''+ arrMoonCake[i][1] +'\')" class="box_gift"><div style="padding:5px"><img src="./img/g-'+ arrMoonCake[i][0] +'.png" style="width:80px;"></div>';
+    str += '<div class="text-name">'+ arrMoonCake[i][1] +'</div></div>';
   }
   $("#DisplayMoonCake").html(str);
 }
@@ -88,7 +91,7 @@ function OpenCake(n,x) {
   .get().then((snapshot)=> {
     snapshot.forEach(doc=> {
       gcheck = 1;
-      str +='<div class="btn-1" style="margin-top:25px; margin-bottom: 15px;">ผลการสุ่มรางวัลของคุณ</div>';
+      str +='<div class="btn-1" style="margin-top:25px; margin-bottom: 15px; background:#0056ff; color:#fff;">ผลการสุ่มรางวัลของคุณ</div>';
       str +='<div style="margin:20px auto;"><img src="./img/'+ doc.data().giftcode +'.png" style="max-height:220px;"></div>';
       if(doc.data().giftcode=="gift-99") {
         str +='<div style="color:#fff;"><b>เสียใจด้วยน้า</b> คุณไม่ได้รับรางวัล<br>จาก ... <b>กิจกรรมวันฮาโลวีน</b><br>แล้วมาร่วมกิจกรรมกันใหม่ในกิจกรรมหน้าน้า</div>';
@@ -103,7 +106,7 @@ function OpenCake(n,x) {
       document.getElementById('id01').style.display='block';
     });
     if(gcheck==0) {
-      str +='<div class="btn-1" style="margin-top:25px; margin-bottom: 15px;">กิจกรรมวันฮาโลวีน</div>';
+      str +='<div class="btn-1" style="margin-top:25px; margin-bottom: 15px; background:#0056ff; color:#fff;">กิจกรรมสุ่มรับโชค</div>';
       str +='<div><img src="./img/g-'+ n +'.png" style="width:80%;"></div>';
       str +='<div class="text-product">'+ x +'</div>';
       str +='<div class="btn-t2" onclick="CheckRewards()" style="margin:10px auto;background:#12ca3c; margin-right:10px;border:2px solid #fff;">คลิกสุ่มรับโชค</div>';
@@ -130,7 +133,7 @@ function CheckRewards() {
   str +='<div class="progress-value" style="font-size:16px;"><div class="blink">'+ TxtRandom.blink() +'</div></div></div><div style="color:#fff;">... โปรดรอสักครู่ ...</div>';
   str +='<div class="clr" style="height: 40px;">';
   $("#ShowMoonCake").html(str);
-  var myTimeout = setTimeout(RandomRewards, 4000);
+  var myTimeout = setTimeout(RandomRewards, 1000);
   //CountRewards();
 }
 
@@ -143,7 +146,7 @@ function CountRewards() {
       i = i+1;
     });
     $("#CountUser").html("ขณะนี้มีผู้ร่วมกิจกรรมแล้ว <span class='font18'>"+ addCommas(i) +"</span> คน");
-    //console.log(i);
+    console.log(i);
   });  
 }
 
@@ -174,7 +177,7 @@ function RandomRewards() {
 function ShowRewards() {
   XCheckRewards = 0;
   var str = "";
-  var myTimeout = setTimeout(CheckData, 2500);
+  var myTimeout = setTimeout(CheckData, 1500);
   str +='<div class="btn-1" style="margin-top:25px; margin-bottom: 15px; background:#0056ff; color:#fff;">ผลการสุ่มรางวัลของคุณ</div>';
   str +='<div style="margin:20px auto;"><img src="./img/'+ NewRewards[2] +'.png" style="max-height:150px;"></div>';
   if(NewRewards[2]=="gift-99") {
@@ -204,7 +207,8 @@ function UpdateRewards() {
     StatusSend : XCheckRewards,
     DateRegister : dateString,
   });
-  ShowRewards();
+  var myTimeout = setTimeout(ShowRewards, 2000);
+  //ShowRewards();
 }
 
 

@@ -5,17 +5,17 @@ function OpenPopMenu() {
   xLine += '<div style="height: 50px;">';
   xLine += '<div style="height: 55px;background-color: #0056ff; width:100%; padding-top:10px;">';
   xLine += '<div style="height: 50px; margin:auto; width:100%;">';
-  xLine += '<center><div style="color:#fff; font-size:15px;font-weight: 600;padding-top:8px;">วันไหว้พระจันทร์</div></center>';
+  xLine += '<center><div style="color:#fff; font-size:15px;font-weight: 600;padding-top:8px;">กิจกรรมวันฮาโลวีน</div></center>';
   xLine += '</div>';
   xLine += '</div><div class="clr" style="height:3px;"></div>';
   xLine += '<div class="clr"></div>';
-  xLine += '<div style="line-height: 1.3;margin:20px 15px; text-align:left;"><b>LINE Retail Society</b> ชวนคุณมารู้จักกับประเพณีการไหว้พระจันทร์ ซึ่งในปีนี้ตรงกับวันศุกร์ที่ 29 กันยายน 2566 และยังชวนคุณร่วมกิจกรรมสุ่มขนมไหว้พระจันทร์ลุ้นรับรางวัลมากมาย ...</div>';
+  xLine += '<div style="line-height: 1.3;margin:20px 15px; text-align:left;"><b>LINE Retail Society</b> ชวนคุณมาหาความลับในวันฮาโลวีนกัน ซึ่งในปีนี้ตรงกับวันอังคารที่ 31 ตุลาคม2566 และยังชวนคุณร่วมกิจกรรมสุ่มลุ้นโชคในเทศกาลวันฮาโลวีน ...</div>';
   xLine += '<div style="max-width:280px; margin:10px auto 10px 25px; width:100%;">';
   xLine += '<div class="clr" style="height: 15px;"></div>';
   xLine += '<div class="icon-left"><img src="./img/icon-mooncake.png" style="width:50px;"></div>';
-  xLine += '<div class="icon-right" onclick="ClickLink(1)">สุ่มรับโชคจาก ขนมไหว้พระจันทร์<div class="icon-text" style="line-height:1.2;">คุณมี 1 ฉลากสำหรับการร่วมลุ้นรางวัลจากกิจกรรมของเรา</div></div>';
+  xLine += '<div class="icon-right" onclick="ClickLink(1)">สุ่มรับโชคจาก กิจกรรมวันฮาโลวีน<div class="icon-text" style="line-height:1.2;">คุณมี 1 ฉลากสำหรับการร่วมลุ้นรางวัลจากกิจกรรมของเรา</div></div>';
   xLine += '<div class="icon-left"><img src="./img/icon-moon.png" style="width:50px;"></div>';
-  xLine += '<div class="icon-right" onclick="ClickLink(2)">ประวัติ วันไหว้พระจันทร์<div class="icon-text" style="line-height:1.2;">มาอ่านประวัติวันไหว้พระจันทร์ว่ามีความเป็นมาอย่างไร</div></div>';
+  xLine += '<div class="icon-right" onclick="ClickLink(2)">ประวัติวันฮาโลวีน<div class="icon-text" style="line-height:1.2;">มาอ่านประวัติตำนานตะเกียงฟักทองว่ามีความเป็นมาอย่างไร</div></div>';
   xLine += '<div class="clr"></div>';
   xLine += '</div>';
   xLine += '<div style="margin-top:0px;margin-left:35px;">';
@@ -67,11 +67,9 @@ function MenuFooter() {
 
 function ClickLink(x) {
   if(x==1) {
-    location.href = "allpic.html";
+    location.href = "home.html";
   } else if(x==2) { 
-    location.href = "ranking.html";
-  } else if(x==3) { 
-    location.href = "photo.html";
+    location.href = "history.html";
   }
 }
 
