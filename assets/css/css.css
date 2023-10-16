@@ -6,6 +6,17 @@
   -o-background-size: cover;
   background-size: cover;  
 }
+.modal-background {
+  width:80%; max-width: 450px;
+  font: 400 15px ttb-regular, sans-serif;
+  background: url(../../img/bg-sound.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;  
+  border-radius: 17px;
+}
+
 .box-menu {
   width:30%; border:1px solid #f1f1f1;  height: 130px; 
   color:#0056ff; font-weight: 600; overflow: hidden;
